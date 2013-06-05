@@ -1,0 +1,45 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Rock Concerts - Flagstaff - Prescott - Northern Arizona - 93-9 The New Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Rock Concerts - Flagstaff - Prescott - Northern Arizona - 93-9 The New Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="activity" />   
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/logo-939themountain.png') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_concerts') }}"/>
+    <meta property="og:title" content="Rock Concerts - Flagstaff - Prescott - Northern Arizona - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="Rock Concerts - Flagstaff - Prescott - Northern Arizona - 93-9 The New Mountain"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Rock Concerts, Flagstaff, Prescott, Northern Arizona"/>
+{% endblock %}
+    
+{% block leftcol_ad %}
+    <a href="http://www.geico.com/" target="_blank">
+        <img src="http://www.kaff.com/images/Geico 2-13-12.JPG" width="300" height="250" alt="Geico" style="margin:5px auto;"/>
+    </a>
+{% endblock %}
+    
+{% block content %}
+    {#<div id="concerts-splash" class="centered dbl-row info-right">
+        <p class="left" style="font-size:1.5em;">Widespread Panic</p>
+        <p class="right">Sunday, July 14th</p>
+        <br class="clear"/>
+        <p><a href="http://www.protixonline.com/" target="_blank" style="color:#ccc;"><span style="text-decoration: underline;">Buy Tickets</span> (On-Sale Friday, March 22nd @ 10am MST) &raquo;</a></p>
+        <p><a href="http://pepsiamp.com/?p=920" target="_blank">Pepsi Amphitheater (Flagstaff) &raquo;</a></p>
+    </div>#}
+    <img src="{{ asset('images/hdr-rock-concerts.png') }}" width="600" height="125" alt="Rock Concerts - Northern Arizona, Flagstaff, Prescott" border="0" usemap="#orpheum" />
+    <iframe src="http://www.939themountain.com/concerts2.php" width="660" height="1100"></iframe>
+        <br/>
+    <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_concerts') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    <br class="clear"/>
+    <map name="#orpheum" id="orpheum">
+        <area shape="rect" coords="335,0,600,125" href="http://www.orpheumpresents.com" target="_blank" alt="Flagstaff Orpheum" />
+    </map>
+{% endblock %}

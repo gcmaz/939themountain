@@ -1,0 +1,100 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Win a Free Lunch from 7 ate 9 and 93.9 The Mountain - Flagstaff Radio Contest
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Win a Free Lunch from 7 ate 9 and 93.9 The Mountain - Flagstaff Radio Contest"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="activity" />   
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('images/free-lunch-7ate9.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest':'free-lunch'}) }}"/>
+    <meta property="og:title" content="Win Free Lunch From 7 at 9 and 93.9 The Mountain Rock Radio"/> 
+    <meta property="og:description" content="Win Free Lunch From 7 at 9 and 93.9 The Mountain Rock Radio"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="win a free lunch, radio contest, flagstaff radio"/>
+{% endblock %}
+
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        form.freelunchform { font-size: 14px;color:#f6ad40; margin-top:25px;}
+        form.freelunchform div { clear: left; margin-bottom: 10px; }
+        form.freelunchform label { float: left; margin-right: 10px; text-align: right; width: 150px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#ffe372; }
+        form.freelunchform input[type="text"],
+        form.freelunchform input[type="email"]
+            { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.freelunchform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.freelunchform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
+        form.freelunchform input[type="submit"] { margin-left: 160px; width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.freelunchform ul li { color: #ff0000; margin-bottom: 5px; }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% if status == 'live' %}
+    
+    <div style="background-color:#ada633;margin-top:30px;width:600px;margin:auto;">
+          <a href="http://7ate9lunch.com/" target="_blank">
+              <img src="{{ asset('images/free-lunch-7ate9.jpg') }}" alt="Win a Free Lunch from 93-9 The Mountain and 7 ate 9" width="600" height="100" class="centered"/>
+          </a>
+          <p style="font-weight:bold;background-color:#de5624;padding:10px 0;color:#ffc672;margin-top:0;">Win a FREE lunch for six people from 7 ate 9!<br/>Enter below and we will choose a winner every Wednesday!</p>
+
+        {% for flashMessage in app.session.flashbag.get('freelunchnotice') %}
+            <div class="notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+
+          <div style="width:90%;text-align:left;">
+              <form action="{{ path('TheMountainMainBundle_contest', {'contest':'free-lunch'}) }}" method="post" {{ form_enctype(form) }} class="freelunchform">
+                  {{ form_errors(form) }}
+                  {# build rows automatically with form_row #}
+                  {{ form_row(form.name) }}
+                  {{ form_row(form.email) }}
+                  {{ form_row(form.phone) }}
+                   {# build rows manually below so we can customize the label #}
+                  {# workplace #}
+                  <div>
+                  {{ form_label(form.workplace, 'Where You Work') }}
+                  {{ form_errors(form.workplace) }}
+                  {{ form_widget(form.workplace) }}
+                  </div>
+                  <div>
+                   {# workplaceaddy #}
+                  {{ form_label(form.workplaceaddy, 'Work Address') }}
+                  {{ form_errors(form.workplaceaddy) }}
+                  {{ form_widget(form.workplaceaddy) }}
+                  {# workplacetotal #}
+                  </div>
+                  <div>
+                  {{ form_label(form.workplacetotal, 'How Many at Work') }}
+                  {{ form_errors(form.workplacetotal) }}
+                  {{ form_widget(form.workplacetotal) }}
+                  {# whywin #}
+                  </div>
+                  <div>
+                  {{ form_label(form.whywin, 'Why You Should Win') }}
+                  {{ form_errors(form.whywin) }}
+                  {{ form_widget(form.whywin) }}
+                  </div>
+
+                  {{ form_rest(form) }}
+
+                  <input type="submit" value="Submit" />
+              </form>
+          </div>
+
+          <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest':'free-lunch'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+          <br class="clear"/><br/>
+        </div>
+    
+    {% elseif status == 'dead' %}
+        <h1>Sorry, this contest is not active right now.</h1>
+    {% endif %}
+{% endblock %}

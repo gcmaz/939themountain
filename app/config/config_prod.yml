@@ -1,0 +1,24 @@
+imports:
+    - { resource: config.yml }
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      buffered
+        buffered:
+            type:  buffer
+            handler: swift
+        swift:
+            type:       swift_mailer
+            from_email: error@939themountain.gcmaz.com
+            to_email:   webmaster@939themountain.gcmaz.com
+            subject:    An Error Occurred!
+            level:      debug

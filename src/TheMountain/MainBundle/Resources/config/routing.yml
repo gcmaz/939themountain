@@ -1,0 +1,84 @@
+TheMountainMainBundle_homepage:
+    path: /
+    defaults: { _controller: TheMountainMainBundle:Page:index }
+    methods: [GET|POST]
+
+TheMountainMainBundle_contact:
+    path: /contact/rock-radio/93-9
+    defaults: { _controller: TheMountainMainBundle:Page:contact }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_contact2:
+    path: /contact
+    defaults: { _controller: TheMountainMainBundle:Page:contact }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_onair:
+    path: /on-air/radio/talent/programming
+    defaults: { _controller: TheMountainMainBundle:Page:onair }
+    methods: [GET]
+
+TheMountainMainBundle_photos:
+    path: /photos/flagstaff/prescott
+    defaults: { _controller: TheMountainMainBundle:Page:photos }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_song_request:
+    path: /radio/songs/requests
+    defaults: { _controller: TheMountainMainBundle:Page:songrequest }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_concerts:
+    path: /concerts/rock/flagstaff/prescott/arizona
+    defaults: { _controller: TheMountainMainBundle:Page:concerts }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_concerts2:
+    path: /concerts
+    defaults: { _controller: TheMountainMainBundle:Page:concerts }
+    methods: [GET]
+
+TheMountainMainBundle_community:
+    path: /northern-arizona/community/info
+    defaults: { _controller: TheMountainMainBundle:Page:community }
+    methods: [GET]
+    
+TheMountainMainBundle_whats:
+    path: /flagstaff/prescott/events
+    defaults: { _controller: TheMountainMainBundle:Page:whats }
+    methods: [GET]
+
+TheMountainMainBundle_contest:
+    path: /contest/{contest}
+    defaults: { _controller: TheMountainMainBundle:Contest:contest,  contest: 'default' }
+    methods: [GET|POST]
+  
+TheMountainMainBundle_splash:
+    path: /info/{splash}
+    defaults: { _controller: TheMountainMainBundle:Splash:splash, splash: 'default' }
+    methods: [GET]
+    
+TheMountainMainBundle_advertise:
+    path: /radio/flagstaff/prescott/advertise
+    defaults: { _controller: TheMountainMainBundle:Advertise:enter }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_advertise_show:
+    path: /radio/flagstaff/prescott/advertise/{show}
+    defaults: { _controller: TheMountainMainBundle:Advertise:show, show: 'none'  }
+    methods: [GET]
+    
+TheMountainMainBundle_jobs:
+    path: /jobs
+    defaults: { _controller: TheMountainMainBundle:Page:jobs }
+    methods: [GET]
+    
+TheMountainMainBundle_news:
+    path: /flagstaff/prescott/news/weather
+    defaults: { _controller: TheMountainMainBundle:Page:news }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_test:
+    path: /test
+    defaults: { _controller: TheMountainMainBundle:Page:test }
+    methods: [GET|POST]

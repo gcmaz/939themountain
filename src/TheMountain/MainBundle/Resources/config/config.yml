@@ -1,0 +1,6 @@
+parameters:
+  themountain.emails.contact_email: [jeff.basham@kaff.com]
+  themountain.emails.song_request_email: [ eddie.miller@939themountain.com ]
+  themountain.emails.freelunch_email: [ webmaster@939themountain.com, kurt.zimmerman@kaff.com ]
+  themountain.emails.advertise_email: [jeff.basham@kaff.com, karen.kinney@kaff.com, clay.mccauslin@kaff.com, patrick@magic991.com]
+  themountain.emails.webmaster_email: webmaster@939themountain.com

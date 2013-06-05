@@ -1,0 +1,44 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    4th of July Parade in Flagstaff - 93-9 The New Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="4th of July Parade in Flagstaff - 93-9 The New Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/4th-july-parade.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash') }}/4th-july-parade"/>
+    <meta property="og:title" content="4th of July Parade in Flagstaff - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="4th of July Parade in Flagstaff, Arizona - 93-9 The New Mountain"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Flagstaff, 4th of July Parade, Fourth of July Parade"/>
+{% endblock %}
+
+{% block content %}
+    <div class="splash" style="background-color:#fff;">
+        <img src="{{ asset('images/4th-july-parade.jpg') }}" width="675" height="344" alt="4th of July Parade, Flagstaff" />
+        <p style="text-align:center;font-size:0.9em;color:#000;">This annual tradition has more than 100 entries. Designated an "Arizona Treasure" by former Governor Janet Napolitano.<br/>
+          <br/>
+          <span style="color:#C00;font-size:1.3em;">Historic Downtown Flagstaff, 9 a.m. July 4th 2013</span>
+        </p>
+        <br/>
+        <p style="width:300px;float:left;text-align:center;font-size:0.8em;color:#000;">
+        <a href="http://www.flagstaffchamber.com/wp-content/uploads/2013/04/Application-2013.pdf?e65662" target="_blank" style="color:blue;">Click Here For An Application &raquo;</a>
+        <br/>
+        Visit the<br/><a href="http://www.flagstaffchamber.com" target="_blank" style="color:blue;">Flagstaff Chamber of Commerce</a> for more information.
+        <br/>
+        <a href="http://www.flagstaffchamber.com" target="_blank"><img src="{{asset('images/sponsors/flag-chamber.jpg')}}" width="147" height="97" alt="Flagstaff Chamber" style="margin-right:20px;" /></a>
+        </p>
+        <p style="color:#fff;font-weight:normal;font-size:14px;text-align:center;width:300px;float:right;background-color:#cc0000;margin:0 10px 0 0;padding:5px;-moz-border-radius:5px;border-radius:5px;-webkit-border-radius:5px;">
+            <span style="text-decoration:underline;font-weight:bold;font-size:16px;">2nd Annual Downtown Mile</span><br/>&bull; 7 a.m. Heritage Square<br/>&bull; First race of it's kind in Flagstaff<br/>&bull; 300 runners of all abilities in 4 waves<br/><br/>Presented by Flagstaff Chamber of Commerce and <a href="http://www.teamrunflagstaff.com/" target="_blank" style="color:#fff;">Team Run Flagstaff</a>  
+        </p>
+        <br style="clear:both;" /><br/>
+        <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash') }}/4th-july-parade" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    </div>
+{% endblock %}

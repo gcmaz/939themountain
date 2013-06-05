@@ -1,0 +1,65 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    The Daily Bribe - Radio Contest - 93-9 The New Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="The Daily Bribe - Radio Contest - 93-9 The New Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/660x250/daily-bribe.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest') }}/daily-bribe"/>
+    <meta property="og:title" content="The Daily Bribe - Radio Contest - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="The Daily Bribe - Radio Contest for Northern Arizona - 93-9 The New Mountain"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="radio, contest, Daily Bribe, Flagstaff, Prescott"/>
+{% endblock %}
+
+{% block content %}
+    <div class="contest">
+        <img src="{{ asset('images/660x250/daily-bribe.jpg') }}" width="660" height="250" alt="The Daily Bribe Radio Contest - Northern Arizona" />
+        <p>
+            <span style="color:#fff;">The Daily Bribe</span> is your Payoff for Rockin with The New 93-9!<br/>
+            Listen to Eddie between <span style="color:#fff;">10am - 4pm M-F</span> for the <span style="color:#fff;">"song of the day"</span>, then be <span style="color:#fff;">caller #3</span> and you will win <span style="color:#fff;">$50</span>!
+            <br/>
+            Eddie will tell you the "song of the day" at 7:20am
+            <br/>
+            <span style="color:#f3aa40;font-size:1.2em;">928-773-1000</span>
+        </p>
+        <div class="sponsors">
+            <p style="font-size:11px;font-weight:bold;color:#666;padding:5px;margin-top:10px;">Brought To You By:</p>
+            <ul style="float:left;list-style-type:none;margin:auto;padding:0;">
+                <li><a href="http://www.bigotires.com/" target="_blank"><img src="{{ asset('images/sponsors/big-o-tires.jpg')}}" width="180" height="auto" /></a></li>
+                <li><a href="http://hotyogaprescott.com/" target="_blank"><img src="{{ asset('images/sponsors/bend-hot-yoga.jpg')}}" width="175" height="auto" /></a></li>
+                <li><a href="http://www.flagstafffootandankle.com/" target="_blank"><img src="{{ asset('images/sponsors/flagstaff-foot-doctors.jpg')}}" width="108" height="auto" /></a></li>
+                <li><a href="http://ww3.truevalue.com/oldtrailtruevaluelumber/Home.aspx" target="_blank"><img src="{{ asset('images/sponsors/old-trails-true-value.jpg')}}" width="127" height="auto" /></a></li>
+                <li><a href="http://www.fatolivesflagstaff.com/" target="_blank"><img src="{{ asset('images/sponsors/fat-olives.jpg')}}" width="180" height="auto" /></a></li>
+                <li><a href="http://www.bandlflooringamerica.com/" target="_blank"><img src="{{ asset('images/sponsors/bl-flooring.jpg')}}" width="180" height="auto" /></a></li>
+            </ul>
+            <ul style="float:right;list-style-type:none;margin:auto;padding:0;">
+                <li><a href="http://www.nazveincenter.com/" target="_blank"><img src="{{ asset('images/sponsors/naz-vein-center.jpg')}}" width="180" height="auto" /></a></li>
+                <li><a href="http://www.anytimefitness.com/" target="_blank"><img src="{{ asset('images/sponsors/anytime-fitness.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="http://www.warnercompanies.com/" target="_blank"><img src="{{ asset('images/sponsors/warners-nursery.jpg')}}" width="150" height="auto" /></a></li>
+                <li><a href="http://www.sunvalleytireaz.com/" target="_blank"><img src="{{ asset('images/sponsors/sun-valley-tire-and-auto.jpg')}}" width="159" height="auto" /></a></li>
+                <li><a href="http://www.lambautocenters.com/" target="_blank"><img src="{{ asset('images/sponsors/lamb-nissan-chevrolet.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="http://www.yelp.com/biz/all-basic-connections-and-services-flagstaff" target="_blank"><img src="{{ asset('images/sponsors/all-basic-con.jpg')}}" width="190" height="auto" /></a></li>
+            </ul>
+             <ul style="list-style-type:none;margin:auto;padding:0;">
+                <li><a href="http://www.prescott.edu/" target="_blank"><img src="{{ asset('images/sponsors/prescott-college.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="http://www.cornerfeedandtack.com/" target="_blank"><img src="{{ asset('images/sponsors/the-corner-feed-and-tack.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="http://www.nilescellular.com/" target="_blank"><img src="{{ asset('images/sponsors/niles-cellular.png')}}" width="150" height="auto" /></a></li>
+                <li><a href="http://www.salsabravaflagstaff.com/" target="_blank"><img src="{{ asset('images/sponsors/salsa-brava.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="http://www.blimpie.com/" target="_blank"><img src="{{ asset('images/sponsors/blimpie.jpg')}}" width="200" height="auto" /></a></li>
+                <li><a href="https://www.facebook.com/SpeediCarWashandFuel" target="_blank"><img src="{{asset('images/sponsors/speedi-car-wash.jpg')}}" width="170" height="auto" /></a></li>
+             </ul>
+            <br class="clear" />  
+        </div>
+        <p><a href="http://www.gcmaz.com/rules/2013_50th_Birthday_Party_Promotion_Rules.pdf" target="_blank" style="text-decoration:none;color:#666;font-size:10px;">Official Rules</a></p>
+        <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest') }}/daily-bribe" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    </div>
+{% endblock %}

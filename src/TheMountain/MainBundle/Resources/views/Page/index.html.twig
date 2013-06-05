@@ -1,0 +1,87 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block styles %}
+    {{ parent() }}
+    <link type="text/css" rel="stylesheet" href="{{asset('scripts/nivo-slider/nivo-slider.css')}}"/>
+{% endblock %}
+
+{% block js_top %}
+    {{ parent() }}
+    <script type="text/javascript" charset="utf-8" src="{{ asset('scripts/jquery.tweet.cache.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('scripts/nivo-slider/jquery.nivo.slider.pack.js') }}"></script>
+    <script type='text/javascript'>
+    $(document).ready(function(){
+        //nivo slider
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+                effect: 'boxRain',
+                pauseTime: 5000,
+                directionNav: false,
+                pauseOnHover: false
+            });
+        });
+     });
+    </script>
+{% endblock %}
+    
+{% block leftcol_ad %}
+{% endblock %}
+    
+{% block content %}
+    <div class="mainbox_box">
+        <div class="slider_wrapper theme_default">
+            <div id="slider" class="nivoSlider">
+                {#<img src="{{ asset('images/660x250/default-1.jpg') }}" data-thumb="{{ asset('images/660x250/default-1.jpg') }}" width="660" height="250" alt="The New 93-9 The Mountain Rocks">#}
+                {#<img src="{{ asset('images/660x250/default-2.jpg') }}" data-thumb="{{ asset('images/660x250/default-2.jpg') }}" width="660" height="250" alt="We Play The Most Rock">#}
+                <a href="{{path('TheMountainMainBundle_whats')}}"><img src="{{asset('images/660x250/reo-speedwagon.jpg')}}" width="660" height="250" alt="REO Speedwagon Flagstaff Concert"></a>
+                    <a href="{{path('TheMountainMainBundle_contest', {'contest': 'daily-bribe'})}}"><img src="{{ asset('images/660x250/daily-bribe.jpg') }}" width="660" height="250" alt="The Daily Bribe" title="Win $50 Every Weekday - The Daily Bribe - Get Contest Details &raquo;" /></a>
+                <a href="{{path('TheMountainMainBundle_concerts')}}"><img src="{{ asset('images/660x250/widespread-panic-1.jpg') }}" data-thumb="{{ asset('images/660x250/widespread-panic-1.jpg') }}" width="660" height="250" alt="Widespread Panic"></a>
+                {#<a href="{{path('TheMountainMainBundle_concerts')}}"><img src="{{ asset('images/660x250/widespread-panic-2.jpg') }}" data-thumb="{{ asset('images/660x250/widespread-panic-2.jpg') }}" width="660" height="250" alt="Widespread Panic"></a>#}
+            </div>
+        </div>
+    </div>
+    <div class="listener_box">
+        <div id="lb1">
+            <p>#Flagstaff</p>
+            <iframe src="http://snapwidget.com/sl/?h=ZmxhZ3N0YWZmfGlufDEyNXwyfDN8fG5vfDV8bm9uZQ==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:130px; height: 130px" ></iframe>				
+            <p>#Prescott</p>
+            <iframe src="http://snapwidget.com/sl/?h=cHJlc2NvdHR8aW58MTI1fDJ8M3x8bm98NXxub25l" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:130px; height: 130px" ></iframe>
+        </div>
+        <div id="lb3">
+            {{ display_blockA|raw }}
+            {{ display_blockB|raw }}
+        </div>
+        <div id="lb2">
+            <div class="fb-like-box" data-href="http://www.facebook.com/TheNew939" data-width="340" data-height="305" data-show-faces="false" data-colorscheme="dark" data-stream="true" data-border-color="black" data-header="false" style="background-color:#151515;text-align:left;"></div>
+        </div>
+        <br class="clear"/>
+        <p style="float:left;color:#666;font-size:10px;font-weight:700;margin-left:25px;">Instagram Photos</p>
+        <p style="float:right;color:#666;font-size:10px;font-weight:700;margin-right:25px;">Instagram Photos</p>
+        {#
+        <br class="clear"/><br/>
+            <div style="clear:both;width:100%;height:100px;display:block;">
+            <!-- twitter feed -->
+            <div id="ticker" class="query"></div>
+        </div>
+        #}
+        <br class="clear"/><br/><br/>
+        <div class="box_320x150 box_left">
+            <a href="http://clubmountain.939themountain.com/asp3/lwcodes.aspx" target="_blank">
+                <img src="{{ asset('images/320x150-rock-word.jpg') }}" width="320" height="150" alt="Play The Rock Word"/>
+            </a>
+        </div>
+        <div class="box_320x150 box_right">
+            <a href="{{ path('TheMountainMainBundle_splash', {'splash': '4th-july-parade'}) }}" >
+                <img src="{{ asset('images/320x150-4th-july-parade.jpg') }}" width="320" height="150" alt="4th July Parade Flagstaff"/>
+            </a>
+        </div>
+        {#
+        <div class="box_320x150 box_right">
+            <a href="{{ path('TheMountainMainBundle_onair') }}" >
+                <img src="{{ asset('images/320x150-the-core.jpg') }}" width="320" height="150" alt="The Core with Meltdown"/>
+            </a>
+        </div>
+        #}
+        <br class="clear"/>
+    </div>
+{% endblock %}

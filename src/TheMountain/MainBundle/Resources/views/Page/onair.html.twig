@@ -1,0 +1,75 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    On Air Talent and Programming - Northern Arizona Rock Radio - 93-9 The New Mountain
+{% endblock %}
+    
+{% block description %}
+    <meta name="description" content="On Air Talent and Programming - Northern Arizona Rock Radio - 93-9 The New Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/logo-939themountain.png') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_onair') }}"/>
+    <meta property="og:title" content="On Air Talent and Programming - Northern Arizona Rock Radio - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="On Air Talent and Programming - Northern Arizona Rock Radio - 93-9 The New Mountain"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="on air, radio, talent, programming, Flagstaff, Prescott"/>
+{% endblock %}
+
+{% block content %}
+    <div class="onair centered">
+            <div class="info-left">
+            	<a href="http://www.facebook.com/939TheMountain" target="_blank">
+                    <img src="{{ asset('images/eddie150x150.jpg') }}" alt="Eddie Miller" width="150" height="150" border="0"/>
+                </a>
+            </div>
+            <div class="info-right">
+            	<p>Eddie Miller <span style="color:#fff;">| Mid-Day 10a - 2p</span></p>
+	<p>The Classic Rocker!  Eddie has been dominating Classic Rock radio in NoAZ on 93.9 The Mountain for the past 12 years ... no one knows more about Classic Rock!  Catch the history, the current state of Classic Rock music &amp; artists and the best Classic Rock on the radio, every morning.  One final thing ... something you don’t know about Eddie is that he is superstitious - he always wears plaid underwear on Mondays.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <div class="info-left">
+                <a href="http://www.facebook.com/939TheMountain" target="_blank">
+                    <img src="{{ asset('images/leza150x150.jpg') }}" alt="Leza" width="150" height="150" border="0" />
+                </a>
+            </div>
+            <div class="info-right">
+            	<p>Leza <span style="color:#fff;">| Afternoons 2p - 7p</span></p>
+            <p>With long blocks of rock, Leza in the afternoon gives our listeners all the rock they want and keeps the community informed with what's going on around Northern Arizona.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <div class="info-left">
+            	<a href="http://www.facebook.com/TheCoreRocks" target="_blank">
+                    <img src="{{ asset('images/the-core150x150.jpg') }}" width="150" height="150" border="0" alt="The Core with Meltdown"  />
+                </a>
+            </div>
+            <div class="info-right">
+            	<p>The Core <span style="color:#fff;">| Saturdays 10p - Midnight</span></p>
+            <p>Hosted by Meltdown, The Core is a two hour show that evokes nostalgia with music and updates from the rock artists that thrived in the 90’s including Pearl Jam, Nirvana, Red Hot Chili Peppers, Soundgarden, and U2.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <div class="info-left">
+            	<a href="http://www.chopshopradio.net/" target="_blank">
+                    <img src="{{ asset('images/chop-shop.jpg') }}" width="150" height="150" border="0" alt="The Core with Meltdown" />
+                </a>
+            </div>
+            <div class="info-right">
+            	<p>Chop Shop <span style="color:#fff;">| Saturdays 8p - 10p</span></p>
+            <p> All aspects of rock music incorporate the guitar to some extent. This show invites the listeners to hear the songs they know and love from different perspectives, while occasionally introducing the audience to some guitar gems they may have missed.</p>
+            </div>
+            <br class="clear"/>
+            <div class="spacer"></div>
+            <br class="clear"/>
+            <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_onair') }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+            <br class="clear"/><br/>
+        </div>
+    </div>
+    <br/>
+{% endblock %}

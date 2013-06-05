@@ -1,0 +1,59 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block js_top %}
+    {{ parent() }}
+    {# include non-min jquery for debugging on this page #}
+    <script type="text/javascript" src="{{ asset('scripts/jquery-1.9.1.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ asset('twitter/jquery.tweet.js') }}"></script>
+{% endblock %}
+
+{% block leftcol_mc %}{% endblock %}
+{% block leftcol_fb %}{% endblock %}
+    
+{# block exp_leaderboard %}
+    <div id="expleaderboard">
+        <a href="#" target="_blank">
+            <img src="{{ asset('images/660x150/widespread-panic.jpg') }}" width="660" height="150" alt="Widespread Panic Tickets" />
+        </a>
+    </div>
+{% endblock #}
+
+{% block content %}
+    {# twitter feed #}
+    <!--div id="ticker" class="query"></div-->
+    <br class="clear"/>
+    <br/><br/><br/><br/><br/><br/><br/>
+{% endblock %}
+
+{% block js_btm %}
+    <script type='text/javascript'>
+        $(document).ready(function(){
+           // sea of clouds twitter ticker mod
+           $(function($){
+                $("#ticker").tweet({
+                  modpath: "{{ asset('/twitter/') }}",
+                  username: "939TheMountain",
+                  list: "the-mountain-list",
+                  page: 1,
+                  avatar_size: 32,
+                  count: 15,
+                  loading_text: "loading ..."
+                }).bind("loaded", function() {
+                  var ul = $(this).find(".tweet_list");
+                  var ticker = function() {
+                    setTimeout(function() {
+                      var top = ul.position().top;
+                      var h = ul.height();
+                      var incr = (h / ul.children().length);
+                      var newTop = top - incr;
+                      if (h + newTop <= 0) newTop = 0;
+                      ul.animate( {top: newTop}, 400 );
+                      ticker();
+                    }, 5000);
+                  };
+                  ticker();
+                });
+            });
+         });
+    </script>
+{% endblock %}

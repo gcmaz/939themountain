@@ -1,0 +1,7 @@
+parameters:
+#    the_mountain_main.example.class: TheMountain\MainBundle\Example
+
+services:
+#    the_mountain_main.example:
+#        class: %the_mountain_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

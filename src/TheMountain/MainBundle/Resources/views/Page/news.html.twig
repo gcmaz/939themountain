@@ -1,0 +1,128 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    News and Weather - Flagstaff - Prescott - Grand Canyon - Sedona - Williams
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="News and Weather - Flagstaff - Prescott - Grand Canyon - Sedona - Williams"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="News and Weather - Flagstaff - Prescott - Grand Canyon - Sedona - Williams"/>
+{% endblock %}
+
+{% block styles %}
+    {{ parent() }}
+    <style type=text/css">
+    .news{
+	color:#333;
+	width:90%;
+	margin:auto;
+    }
+    a.news-source{
+            color:#000;
+            font-weight:500;
+            padding:4px;
+            font-size:12px;
+            text-decoration:none;
+            border:1px solid #999;
+            background-color:#fff;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+    }
+    a.news-source:hover{
+            border:1px solid #039;
+    }
+    #news{
+            text-align:left;
+            margin-top:0;
+            padding-top:0;
+    }
+    p.news-hdr{
+            font-weight:700;
+            color:#fff;
+            text-align:left;
+            font-size:12px;
+            padding:3px;
+            border:1px solid #666;
+            background-color:#039;
+            margin:15px auto 0;
+    }
+    .rssFeed {
+            font-family:Verdana, Geneva, sans-serif;
+            font-size: 14px;
+            margin: 5px auto;
+    }
+    .rssHeader {  }
+    .rssBody { }
+    .rssBody ul { list-style: none; }
+    .rssBody ul, .rssRow, .rssRow h4, .rssRow p {
+            margin: 5px auto;
+            padding: 5px;
+    }
+    .rssRow  { border-bottom:1px solid #999;background-color:#ebe8e2; }
+    .rssRow h4, .rssRow h4 a { font-weight:700;font-size:16px;display:block;color:#039; }
+    .rssFeed a { color:#000;text-decoration:none; }
+    .rssFeed a:hover { text-decoration:underline; }
+    .rssRow div {
+            font-size: 14px;
+            color: #000;
+            margin: 7px auto;
+    }
+    .odd { }
+    .even { }
+    .rssRow .rssMedia {
+            padding: 5px;
+            margin: 5px;
+            font-size: 1em;
+    }
+    </style>
+{% endblock %}
+    
+{% block js_top %}
+    {{ parent() }}
+    <script src="scripts/jquery.zrssfeed.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.vticker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            //rss new feeds
+            $('#news').rssfeed('{{newsUrl|raw}}',{
+                    header: false,
+                    snippet: false,
+                    linkcontent: true,
+                    linktarget: '_blank'
+            }, function(e1) {
+                    $(e1).find('div.rssBody').vTicker({
+                            showItems: 4
+                    });
+            });
+    });
+    </script>
+{% endblock %}
+    
+{% block content %}
+    <p style="clear:both;font-size:24px;font-weight:bold;margin:5px auto;padding:5px 0;color:#f6ad40;" class="centered">
+        News and Weather
+    </p>
+    <div class="news centered">
+        <p style="color:#666;font-size:11px;font-weight:600;">Please select a news source:</p>
+        <a href="news.php?n=dailysun" class="news-source">AZ Daily Sun</a>
+        <a href="news.php?n=prescott" class="news-source">Prescott Daily Courier</a>
+        <a href="news.php?n=sedona" class="news-source">Sedona Red Rock</a>
+        <a href="news.php?n=williams" class="news-source">Williams News</a>
+        <a href="news.php?n=fox" class="news-source">Fox 10 Phoenix</a>
+        <br/><br/>
+        <a href="news.php?n=abc15flag" class="news-source">ABC 15 Flagstaff</a>
+        <a href="news.php?n=abc15pres" class="news-source">ABC 15 Prescott</a>
+		<a href="news.php?n=abc15naz" class="news-source">ABC 15 NAZ</a>
+        <a href="news.php?n=aptop" class="news-source">AP Headlines</a>
+        <a href="news.php?n=rolstone" class="news-source">Rolling Stone Music News</a>
+        <p class="news-hdr">
+            {{ newsSource|raw }}
+        </p> 
+        <div id="news"></div>
+        <br/>
+        <p style="color:#666;font-size:11px;font-weight:600;">(mouse over an article to pause the animation)</p>
+    </div>
+{% endblock %}
