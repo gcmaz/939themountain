@@ -115,6 +115,12 @@ class PageController extends Controller
     {
         return $this->render('TheMountainMainBundle:Page:jobs.html.twig');
     }
+
+    public function weatherAction()
+    {
+        return $this->render('TheMountainMainBundle:Page:weather.html.twig');
+    }
+
     
     public function testAction()
     {

@@ -73,6 +73,11 @@ TheMountainMainBundle_jobs:
     defaults: { _controller: TheMountainMainBundle:Page:jobs }
     methods: [GET]
     
+TheMountainMainBundle_weather:
+    path: /weather
+    defaults: { _controller: TheMountainMainBundle:Page:weather }
+    methods: [GET|POST]
+    
 TheMountainMainBundle_news:
     path: /flagstaff/prescott/news/weather
     defaults: { _controller: TheMountainMainBundle:Page:news }
