@@ -140,7 +140,7 @@ div.notice {
 	font-family: 'Wallpoet', cursive;
 }
 .unica{
-	font-family: 'Unica One', cursive;
+	font-family: 'Unica One', sans-serif;
 }
 .logo_box{}
 .sponsor_box{
@@ -238,7 +238,7 @@ ul.dropdown li a, ul.dropdown ul li a{
 	text-decoration:none;
 	font-size:18px;
 	font-weight:600;
-	font-family: 'Unica One', cursive;
+	font-family: 'Unica One', Arial, sans-serif;
 	text-shadow:1px 1px 1px rgba(0,0,0,.5);
 	padding:3px 0;
 	display:block;
@@ -383,10 +383,7 @@ ul.ftr-cities-list li{
 	margin:1px 0;
 	padding:1px 0;
 	line-height:1.2em;
-}
-ul.ftr-cities-list li a{
-	color:#999;
-	text-decoration:none;
+        	color:#999;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 	font-size:12px;
 	font-weight:700;

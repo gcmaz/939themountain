@@ -23,6 +23,9 @@
     } else {
             $display_block = "
                     <h1>Select A Gallery:</h1>
+                    <p><a href=\"$photos_page_url?a=10151651730908514\">
+                                Grace Potter Pre-Show Party Giveaways 6-12-13
+                    </a></p>
                     <p><a href=\"$photos_page_url?a=10151602862538514\">
                                 Battle Of The Bands 5-18-13
                     </a></p>

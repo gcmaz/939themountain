@@ -32,10 +32,8 @@
         <div class="slider_wrapper theme_default">
             <div id="slider" class="nivoSlider">
                 {#<img src="{{ asset('images/660x250/default-1.jpg') }}" data-thumb="{{ asset('images/660x250/default-1.jpg') }}" width="660" height="250" alt="The New 93-9 The Mountain Rocks">#}
-                {#<img src="{{ asset('images/660x250/default-2.jpg') }}" data-thumb="{{ asset('images/660x250/default-2.jpg') }}" width="660" height="250" alt="We Play The Most Rock">#}
-                <a href="{{path('TheMountainMainBundle_contest', {'contest': 'daily-bribe'})}}"><img src="{{ asset('images/660x250/daily-bribe.jpg') }}" width="660" height="250" alt="The Daily Bribe" title="Win $50 Every Weekday - The Daily Bribe - Get Contest Details &raquo;" /></a>
+                <img src="{{ asset('images/660x250/default-2.jpg') }}" data-thumb="{{ asset('images/660x250/default-2.jpg') }}" width="660" height="250" alt="We Play The Most Rock">
                 <a href="{{path('TheMountainMainBundle_concerts')}}"><img src="{{ asset('images/660x250/widespread-panic-1.jpg') }}" data-thumb="{{ asset('images/660x250/widespread-panic-1.jpg') }}" width="660" height="250" alt="Widespread Panic"></a>
-                {#<a href="{{path('TheMountainMainBundle_concerts')}}"><img src="{{ asset('images/660x250/widespread-panic-2.jpg') }}" data-thumb="{{ asset('images/660x250/widespread-panic-2.jpg') }}" width="660" height="250" alt="Widespread Panic"></a>#}
             </div>
         </div>
     </div>
@@ -51,7 +49,7 @@
             {{ display_blockB|raw }}
         </div>
         <div id="lb2">
-            <div class="fb-like-box" data-href="http://www.facebook.com/TheNew939" data-width="340" data-height="305" data-show-faces="false" data-colorscheme="dark" data-stream="true" data-border-color="black" data-header="false" style="background-color:#151515;text-align:left;"></div>
+            <div class="fb-like-box" data-href="http://www.facebook.com/TheNew939" data-width="340" data-height="305" data-show-faces="false" data-colorscheme="dark" data-stream="true" show-border="false" data-header="false" style="background-color:#151515;text-align:left;"></div>
         </div>
         <br class="clear"/>
         <p style="float:left;color:#666;font-size:10px;font-weight:700;margin-left:25px;">Instagram Photos</p>
@@ -70,17 +68,10 @@
             </a>
         </div>
         <div class="box_320x150 box_right">
-            <a href="{{ path('TheMountainMainBundle_splash', {'splash': '4th-july-parade'}) }}" >
-                <img src="{{ asset('images/320x150-4th-july-parade.jpg') }}" width="320" height="150" alt="4th July Parade Flagstaff"/>
-            </a>
-        </div>
-        {#
-        <div class="box_320x150 box_right">
             <a href="{{ path('TheMountainMainBundle_onair') }}" >
                 <img src="{{ asset('images/320x150-the-core.jpg') }}" width="320" height="150" alt="The Core with Meltdown"/>
             </a>
         </div>
-        #}
         <br class="clear"/>
     </div>
 {% endblock %}
