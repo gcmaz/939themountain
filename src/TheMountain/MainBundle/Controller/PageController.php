@@ -153,9 +153,6 @@ class PageController extends Controller
                         <p><a href=\"$photos_page_url?a=10151556446183514\">
                                    KISS Alive Concert 4-20-13
                         </a></p>
-                        <p><a href=\"$photos_page_url?a=10151466818343514\">
-                                    Special Olympics Polar Plunge 3-2-13
-                        </a></p>
                         <p><a href=\"$photos_page_url?a=446824705388092\">
                                    Dew Downtown Flagstaff 2013
                         </a></p>
