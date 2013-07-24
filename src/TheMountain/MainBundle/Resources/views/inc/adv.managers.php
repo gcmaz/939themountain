@@ -16,8 +16,8 @@
       </td>
       <td>
         <div class="sales">
-            <span style="font-weight:bold;">Ted Hixson</span><br />(928) 606-4642<br />
-          <a href="mailto:ted.hixson@kaff.com">ted.hixson@kaff.com</a>
+            <span style="font-weight:bold;">Anthony DeFazio</span><br />(928) 556-2652<br />
+            <a href="mailto:anthony.defazio@kaff.com">anthony.defazio@kaff.com</a>
         </div>
       </td>
     </tr>
@@ -30,7 +30,8 @@
       </td>
       <td>
         <div class="sales">
-            &nbsp;
+            <span style="font-weight:bold;">Ted Hixson</span><br />(928) 606-4642<br />
+          <a href="mailto:ted.hixson@kaff.com">ted.hixson@kaff.com</a>
         </div>
       </td>
     </tr>
@@ -50,6 +51,19 @@
         <div class="sales">
             <span style="font-weight:bold;">Patti Ezell</span><br />(928) 420-0525<br />
             <a href="mailto:patti@magic991.com">patti@magic991.com</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="adinfodiv1">
+            <span style="font-weight:bold;">Dianne Valenti-Gallery</span><br />(928) 445-6880<br />
+            <a href="mailto:dianne@magic991.com">dianne@magic991.com</a>
+        </div>
+      </td>
+      <td>
+        <div class="adinfodiv1">
+            <span style="font-weight:bold;"></span><br /><br />
         </div>
       </td>
     </tr>

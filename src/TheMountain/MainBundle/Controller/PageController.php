@@ -59,18 +59,25 @@ class PageController extends Controller
             $form->bind($request);
             
             if($form->isValid()){
-                $message = \Swift_Message::newInstance()
-                    ->setSubject('93-9 The Mountain | Contact Form')
-                    ->setFrom($contact->getEmail())
-                    ->setReplyTo($contact->getEmail())
-                    ->setTo($this->container->getParameter('themountain.emails.contact_email'))
-                    ->setBody($this->renderView('TheMountainMainBundle:Email:contact.txt.twig', array('contact' => $contact)));
-                $this->get('mailer')->send($message);
-                
-                $this->get('session')->getFlashBag()->add('contactnotice', 'Successfully sent!');
-                
-                //redirect - important to prevent repost from page refresh
-                return $this->redirect($this->generateUrl('TheMountainMainBundle_contact'));
+                if($contact->getFeedme() === null){
+                    //not spam
+                    $message = \Swift_Message::newInstance()
+                        ->setSubject('93-9 The Mountain | Contact Form')
+                        ->setFrom($contact->getEmail())
+                        ->setReplyTo($contact->getEmail())
+                        ->setTo($this->container->getParameter('themountain.emails.contact_email'))
+                        ->setBody($this->renderView('TheMountainMainBundle:Email:contact.txt.twig', array('contact' => $contact)));
+                    $this->get('mailer')->send($message);
+
+                    $this->get('session')->getFlashBag()->add('contactnotice', 'Successfully sent!');
+
+                    //redirect - important to prevent repost from page refresh
+                    return $this->redirect($this->generateUrl('TheMountainMainBundle_contact'));
+                    
+                } else {
+                    // spam - exit but don't send email and don't show managers page
+                    return $this->redirect($this->generateUrl('TheMountainMainBundle_contact'));
+                }
             }
         }
         return $this->render('TheMountainMainBundle:Page:contact.html.twig', array(

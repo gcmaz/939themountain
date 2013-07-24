@@ -87,3 +87,4 @@ TheMountainMainBundle_test:
     path: /test
     defaults: { _controller: TheMountainMainBundle:Page:test }
     methods: [GET|POST]
+    
