@@ -8,79 +8,97 @@
 
 <url>
   <loc>http://939themountain.gcmaz.com/</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/contact/rock-radio/93-9</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://939themountain.gcmaz.com/radio/flagstaff/prescott/advertise</loc>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/on-air/radio/talent/programming</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/concerts/rock/flagstaff/prescott/arizona</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/radio/songs/requests</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/northern-arizona/community/info</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/flagstaff/prescott/events</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://939themountain.gcmaz.com/weather</loc>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://939themountain.gcmaz.com/contests/win/free/lunch/</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+  <loc>http://939themountain.gcmaz.com/jobs</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://939themountain.gcmaz.com/pdf/GeneralContestRules.pdf</loc>
-  <lastmod>2013-02-22T18:29:44+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+  <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151651730908514</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://939themountain.gcmaz.com/pdf/eeo.pdf</loc>
-  <lastmod>2013-02-22T18:29:42+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
+  <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151602862538514</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151577423538514</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151466818343514</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151556446183514</loc>
+  <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=446824705388092</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151421530763514</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>http://939themountain.gcmaz.com/photos/flagstaff/prescott?a=10151348592803514</loc>
-  <changefreq>monthly</changefreq>
+  <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 </urlset>

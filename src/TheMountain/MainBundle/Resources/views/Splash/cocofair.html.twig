@@ -1,0 +1,40 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Coconino County Fair 2013
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Coconino County Fair 2013"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="100319983507036" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('images/660x250/coco-fair-2013.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash', {'splash':'coconino-county-fair'}) }}"/>
+    <meta property="og:title" content="Coconino County Fair 2013"/> 
+    <meta property="og:description" content="Coconino County Fair 2013 Information"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="Coconino County Fair, Fair, Coconino County"/>
+{% endblock %}
+
+{% block content %}
+    <div class="splash" style="background-color:#fff;">
+        <img src="{{ asset('images/660x250/coco-fair-2013.jpg') }}" width="660" height="250" alt="2013 Coconino County Fair" style="margin-top:5px;"/>
+        <p style="font-size:1.2em;color:#c00;text-align:left;margin:10px;">
+            Coconino County Fairgrounds at Fort Tuthill County Park Flagstaff, Arizona
+        </p>
+        <p style="font-size:0.8em;font-weight:400;text-align:left;margin:10px;">
+            There’s Magic in the Fair at the 64th Annual Coconino County Fair bringing traditional fair exhibits and demonstrations, carnival rides, vendors, children’s activities, livestock shows and auction on Labor Day weekend. A wide variety of entertainment offers audiences with cultural presentations, local and regional acts, national headliners and educational experiences for the whole family.
+            <br/><br/>
+            The 64th Annual Coconino County Fair will house multiple family friendly events including, magicians, jugglers, ventriloquists, stilt walkers and entertainers such as  Al Hurricane,  A Flock of Seagulls,  Atlanta Rhythm Section, Reverend Payton’s Big Band, over the Labor Day weekend, August 30-Sept 2.
+        </p>
+        <a href="http://www.coconino.az.gov/index.aspx?NID=275" target="_blank" class="link-btn">Visit Website &raquo;</a>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        <a href="https://tix.extremetix.com/Online/?siteID=3485&cartID=a3fcf499-1636-4516-b974-089e680e409d" target="_blank" class="link-btn">Buy Tickets &raquo;</a>
+        <br style="clear:both;" /><br/>
+        <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash', {'splash': 'coconino-county-fair'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    </div>
+{% endblock %}

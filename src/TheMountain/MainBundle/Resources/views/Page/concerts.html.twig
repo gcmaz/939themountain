@@ -19,12 +19,14 @@
 {% block keywords %}
     <meta name="keywords" content="Rock Concerts, Flagstaff, Prescott, Northern Arizona"/>
 {% endblock %}
+
+{% block leftcol_fb %}{% endblock %}
     
-{# block leftcol_ad %}
-    <a href="http://www.geico.com/" target="_blank">
-        <img src="http://www.kaff.com/images/Geico 2-13-12.JPG" width="300" height="250" alt="Geico" style="margin:5px auto;"/>
+{% block leftcol_ad %}
+    <a href="http://www.coconino.az.gov/index.aspx?NID=275" target="_blank">
+        <img src="{{asset('images/300x250/cocofair-2013.jpg')}}" width="300" height="250" alt="Coconino County Fair 2013" style="margin:5px auto;"/>
     </a>
-{% endblock #}
+{% endblock %}
     
 {% block content %}
     {#<div id="concerts-splash" class="centered dbl-row info-right">

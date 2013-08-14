@@ -14,7 +14,7 @@ class ContestController extends Controller
         switch($contest){
             // default
             case 'default' :
-                return $this->render('TheMountainMainBundle:Page:contest.html.twig', array(
+                return $this->render('TheMountainMainBundle:Contest:default.html.twig', array(
                     'contest' => $contest
                 ));
                 
