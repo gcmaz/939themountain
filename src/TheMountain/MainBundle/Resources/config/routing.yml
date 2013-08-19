@@ -21,7 +21,7 @@ TheMountainMainBundle_onair:
 TheMountainMainBundle_photos:
     path: /photos/flagstaff/prescott
     defaults: { _controller: TheMountainMainBundle:Page:photos }
-    methods: [GET|POST]
+    methods: [GET]
     
 TheMountainMainBundle_song_request:
     path: /radio/songs/requests
