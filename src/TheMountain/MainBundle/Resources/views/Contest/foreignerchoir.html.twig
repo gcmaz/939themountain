@@ -1,0 +1,118 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert! - 93-9 The Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert! - 93-9 The Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/splash/foreigner-choir.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest',{'contest':'foreigner-choir-contest'}) }}"/>
+    <meta property="og:title" content="Foreigner Choir Contest - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert!"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="radio, contest, Foreigner, choir, high school"/>
+{% endblock %}
+    
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        .foreigner-choir{background-color:#000;}
+        .choir-vid{margin:10px auto;border:1px solid #666;padding:10px;width:95%;background-color:#333;}
+        .choir-vid p{color:#ccc;text-align: center;margin:auto;font-size:0.8em;font-weight:600;}
+        #sendbox{z-index:100;	margin:0 auto;width:90%;padding:0;text-align:center;position:relative;height:0px;top:-100;color:#999;opacity:0; border:3px solid #333; background-color:#ccc;filter: Alpha(Opacity=0); /* IE7 */}
+        a.sendbtn{display:inline-block;cursor:pointer;padding:3px 10px;font-weight:600;text-decoration: none;border:1px solid #666;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;background-color:#333;}
+        form.entryform { font-size: 14px;color:#f6ad40; margin-top:25px;}
+        form.entryform div { clear: left; margin-bottom: 10px; }
+        form.entryform label { float: left; margin-right: 10px; text-align: right; width: 150px; font-weight: bold; vertical-align: top; padding-top: 10px; color:#000; }
+        form.entryform input[type="text"],
+        form.entryform input[type="email"],
+        form.entryform input[type="url"]
+            { width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.entryform select { width:350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.entryform textarea { width: 350px; height: 150px; line-height: 26px; font-size: 20px; }
+        form.entryform input[type="submit"] { margin-left: 160px; width: 350px; line-height: 26px; font-size: 20px; min-height: 26px; }
+        form.entryform ul li { color: #000; margin-bottom: 5px; }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="foreigner-choir">
+        <div style="background-image: url('{{asset("images/splash/foreigner-choir.jpg")}}');width:660px;height:478px;text-align:left;">
+            <p class="unica yellow" style="width:210px;font-size:1.2em;font-weight:600;padding:140px 0 0 10px;text-shadow: 1px 1px 2px #000;">
+                Vote for your favorite choir by “liking” it below
+                <br/><br/>
+                <span style="font-size:0.7em;color:#666;">To Enter:</span><br/>
+                Send us a link to your choir singing Foreigner's "I want to know what love is".  We will post it below.
+                <br/><br/>
+                The winners get to sing “I want to know what love is” with Foreigner LIVE!
+            </p>
+        </div>
+        <article class="centered">
+            <p style="color:#ccc;font-weight:600;font-size:0.7em;text-align:center;">The LIVE concert will be October 5th at the Cliff Castle Casino Hotel's Stargazer Pavilion</p>
+            <p style="font-size:0.7em;font-weight:600;color:#666;margin:5px auto 10px;">Deadline for entries and voting is Friday Sept, 20th at 5pm.</p>
+            <a class="yellow sendbtn">Click Here To Enter</a>
+        </article>
+        <br class="clear"/>
+        {% for flashMessage in app.session.flashbag.get('sendlinknotice') %}
+            <div class="notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        <div id="sendbox">
+            <p style="font-size:0.8em;font-weight:700;color:#000;padding:10px;">Send us a link to your choir singing Foreigner's "I want to know what love is".  (The video should be something that we can embed here such as Youtube)</p>
+            <form action="{{ path('TheMountainMainBundle_contest', {'contest':'foreigner-choir-contest'}) }}" method="post" {{ form_enctype(form) }} class="entryform">
+                  {{ form_errors(form) }}
+                  {{ form_row(form.name) }}
+                  {{ form_row(form.email) }}
+                  {{ form_row(form.phone) }}
+                  <div>
+                  {{ form_label(form.where, 'Name of School') }}
+                  {{ form_errors(form.where) }}
+                  {{ form_widget(form.where) }}
+                  </div>
+                  <div>
+                  {{ form_label(form.link, 'Link to video') }}
+                  {{ form_errors(form.link) }}
+                  {{ form_widget(form.link) }}
+                  </div>
+                  {{ form_rest(form) }}
+                  <input type="submit" value="Submit" />
+              </form>
+        </div>
+       {#<section><p class="yellow">The Entrants:</p></section>
+        <article class="choir-vid centered">
+            <iframe width="420" height="315" src="//www.youtube.com/embed/z4O3BCB_AOg" frameborder="0" allowfullscreen></iframe>
+            <p>"Like" this video to vote for it!</p>
+            <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest':'foreigner-choir-contest', 'id':'1'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial" data-colorscheme="dark" ></div>
+        </article>#}
+        <article class="choir-vid centered">
+            <p style="margin:5px auto;">Previous Winners Montgomery High School Chamber Singers Foreigner Concert 2012</p>
+            <iframe width="420" height="315" src="//www.youtube.com/embed/z4O3BCB_AOg" frameborder="0" allowfullscreen></iframe>
+            <p style="margin:5px auto;">Previous Winners Montgomery High School Chamber Singers Foreigner Concert 2012</p>
+        </article>
+        <br/>
+    </section>
+{% endblock %}
+    
+{% block js_btm %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $('.sendbtn').click(function(){
+                        var $sendbox = $('#sendbox');
+                        if ($sendbox.height() > 0) {
+                                $sendbox.animate({ height : 0, opacity : 0, top : 0 });
+                        } else {
+                                $sendbox.animate({ height: 350, opacity : 100, top : 0 });
+                        }
+                });
+        });
+    </script>
+{% endblock %}

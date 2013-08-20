@@ -155,7 +155,8 @@ div.notice {
 	font-family: 'Wallpoet', cursive;
 }
 .unica{
-	font-family: 'Unica One', sans-serif;
+    font-family: 'Unica One', sans-serif;
+    text-transform: uppercase;
 }
 .logo_box{}
 .sponsor_box{

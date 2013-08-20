@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session\Session;
 use TheMountain\MainBundle\Entity\FreeLunch;
 use TheMountain\MainBundle\Form\FreeLunchType;
+use TheMountain\MainBundle\Entity\SendLink;
+use TheMountain\MainBundle\Form\SendLinkType;
 
 class ContestController extends Controller
 {
@@ -16,6 +18,36 @@ class ContestController extends Controller
             case 'default' :
                 return $this->render('TheMountainMainBundle:Contest:default.html.twig', array(
                     'contest' => $contest
+                ));
+            
+             // FOREIGNER CHOIR
+            case 'foreigner-choir-contest' :
+                $sendlink = new SendLink();
+                $form = $this->createForm(new SendLinkType(), $sendlink);
+
+                $request = $this->getRequest();
+                if ($request->getMethod() == 'POST') {
+                    $form->bind($request);
+
+                    if ($form->isValid()) {
+                        //send
+                        $message = \Swift_Message::newInstance()
+                            ->setSubject('93-9 The Mountain | Foreigner Choir Contest Entry')
+                            ->setFrom($sendlink->getEmail())
+                            ->setReplyTo($sendlink->getEmail())
+                            ->setTo($this->container->getParameter('themountain.emails.contest_email'))
+                            ->setBody($this->renderView('TheMountainMainBundle:Email:foreignerchoir.txt.twig', array('sendlink' => $sendlink)));
+                        $this->get('mailer')->send($message);
+
+                        $this->get('session')->getFlashBag()->add('sendlinknotice', 'Your choir is submitted!  Thank you for entering!!');
+
+                        //redirect - important to prevent repost from page refresh
+                        return $this->redirect($this->generateUrl('TheMountainMainBundle_contest', array('contest'=>'foreigner-choir-contest')));
+                        }
+                }
+                return $this->render('TheMountainMainBundle:Contest:foreignerchoir.html.twig', array(
+                    'form' => $form->createView(),
+                    'contest' => $contest,
                 ));
                 
             //DAILY BRIBE

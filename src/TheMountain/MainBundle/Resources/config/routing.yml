@@ -49,8 +49,8 @@ TheMountainMainBundle_whats:
     methods: [GET]
 
 TheMountainMainBundle_contest:
-    path: /contest/{contest}
-    defaults: { _controller: TheMountainMainBundle:Contest:contest,  contest: 'default' }
+    path: /contest/{contest}/{id}
+    defaults: { _controller: TheMountainMainBundle:Contest:contest,  contest: 'default', id: 'null' }
     methods: [GET|POST]
   
 TheMountainMainBundle_splash:
