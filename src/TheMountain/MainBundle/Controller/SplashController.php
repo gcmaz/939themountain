@@ -15,6 +15,12 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
 
+            // TEACHERS APPRECIATION NIGHT
+            case 'teachers-appreciation-night' :
+                return $this->render('TheMountainMainBundle:Splash:teachersnight.html.twig', array(
+                    'splash' => $splash
+                )); 
+                
             // COCO CO FAIR
             case 'coconino-county-fair' :
                 return $this->render('TheMountainMainBundle:Splash:cocofair.html.twig', array(

@@ -158,6 +158,9 @@ div.notice {
     font-family: 'Unica One', sans-serif;
     text-transform: uppercase;
 }
+.arial{
+    font-family: Arial, sans-serif;
+}
 .logo_box{}
 .sponsor_box{
     margin: -10px auto 10px;
