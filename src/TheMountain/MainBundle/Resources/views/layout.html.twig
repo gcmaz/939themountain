@@ -147,10 +147,13 @@
 {% endblock %}
             
 {% block stream_box %}
-    <div class="stream_box">
-            <a href="javascript:void(window.open('http://player.tritondigital.com/8061', 'KMGNFM', 'width=800,height=600'));">
-                <img src="{{ asset('images/listen-live.png') }}" width="675" height="75" alt="Listen Live to 93.9 The Mountain Rock Radio">
-            </a>
+        <div class="stream_box">
+            <img src="{{ asset('images/listen-live.png') }}" width="675" height="75" border="0" alt="Listen Live to 93.9 The Mountain Rock Radio" usemap="#strm" />
+            <map name="strm" id="strm">
+                <area shape="rect" coords="0,0,406,75" href="javascript:void(window.open('http://player.tritondigital.com/8061', 'KMGNFM', 'width=800,height=600'));" />
+                <area shape="rect" coords="407,0,534,75" href="http://www.papajohns.com" target="_blank" />
+                <area shape="rect" coords="535,0,675,75" href="javascript:void(window.open('http://player.tritondigital.com/8061', 'KMGNFM', 'width=800,height=600'));" />
+            </map>
         </div>
 {% endblock %}
 
