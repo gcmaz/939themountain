@@ -1,0 +1,39 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Like Your Way To Maui! Radio Contest on The New 93-9 The Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Like Your Way To Maui!  Northern Arizona Radio Contest on The New 93-9 The Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('images/660x250/maui2013.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest': 'like-your-way-to-maui'}) }}"/>
+    <meta property="og:title" content="Like Your Way To Maui!  Radio Contest on The New 93-9 The Mountain"/> 
+    <meta property="og:description" content="Like Your Way To Maui!  Northern Arizona Radio Contest on The New 93-9 The Mountain"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="radio, contest, win a trip to Maui, win a trip to Hawaii, Flagstaff, Prescott"/>
+{% endblock %}
+
+{% block content %}
+    <div class="contest">
+        <img src="{{ asset('images/660x250/maui2013.jpg') }}" width="660" height="250" alt="Play Like Your Way To Maui! " />
+        <p>
+            Once every weekday, Eddie will call out a <span class="yellow">daily winner</span> that will be invited to attend our big Holiday Party at Cliff Castle Casino Hotel for chances to win up to <span class="yellow">$50,000 CASH</span> and a Dream Vacation to Maui!!!
+        </p>
+        <p>
+            The only way to enter is on our Facebook page or our sponsors Facebook pages (click the Sponsor logos below to go to their pages)
+        </p>
+        <div class="sponsors">
+            <p style="font-size:11px;font-weight:bold;color:#666;padding:5px;margin-top:10px;">Brought To You By:</p>
+            <br class="clear" />  
+        </div>
+        <p><a href="#" target="_blank" style="text-decoration:none;color:#666;font-size:10px;">Official Rules</a></p>
+        <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest':'like-your-way-to-maui'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    </div>
+{% endblock %}

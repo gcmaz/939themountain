@@ -1,0 +1,43 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Vote for Flagstaff High School Choir - Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert! - 93-9 The Mountain
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert! - 93-9 The Mountain"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('/images/splash/foreigner-choir.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com/fcc-1"/>
+    <meta property="og:title" content="Vote for Flagstaff High School Choir - 93-9 The New Mountain"/> 
+    <meta property="og:description" content="Foreigner Choir Contest - Your High School Choir can sing 'I want to know what love is' with the band in concert!"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="radio, contest, Foreigner, choir, high school"/>
+{% endblock %}
+    
+{% block styles %}
+    {{ parent() }}
+    <style type="text/css">
+        .foreigner-choir{background-color:#000;}
+        .choir-vid{margin:10px auto;border:1px solid #666;padding:10px;width:95%;background-color:#333;}
+        .choir-vid p{color:#ccc;text-align: center;margin:auto;font-size:0.8em;font-weight:600;}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="foreigner-choir">
+        <article class="choir-vid centered">
+            <p style="margin:5px auto;font-size:1.4em;">Flagstaff High School</p>
+            <iframe width="420" height="315" src="//www.youtube.com/embed/cxHBogd2Lcc" frameborder="0" allowfullscreen></iframe>
+            <p style="margin:10px auto 0;font-size:1.4em;">"Like" this video to vote for it!</p>
+            <div class="fb-like" data-href="http://939themountain.gcmaz.com/fcc-1" data-send="true" data-width="450" data-show-faces="true" data-font="arial" data-colorscheme="dark" ></div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </article>
+    </section>
+{% endblock %}
+    

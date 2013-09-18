@@ -19,6 +19,12 @@ class ContestController extends Controller
                 return $this->render('TheMountainMainBundle:Contest:default.html.twig', array(
                     'contest' => $contest
                 ));
+                
+            // LIKE YOUR WAY TO MAUI
+            case 'like-your-way-to-maui' :  
+                return $this->render('TheMountainMainBundle:Contest:maui2013.html.twig', array(
+                    'contest' => $contest
+                ));
             
              // FOREIGNER CHOIR
             case 'foreigner-choir-contest' :
@@ -89,5 +95,14 @@ class ContestController extends Controller
 
         }
     }
+        public function fcc1Action()
+    {
+            return $this->render('TheMountainMainBundle:Contest:foreignerchoir1.html.twig');
+     }
+     
+    public function fcc2Action()
+    {
+            return $this->render('TheMountainMainBundle:Contest:foreignerchoir2.html.twig');
+     }
 }
 ?>

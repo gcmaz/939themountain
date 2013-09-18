@@ -52,6 +52,16 @@ TheMountainMainBundle_contest:
     path: /contest/{contest}/{id}
     defaults: { _controller: TheMountainMainBundle:Contest:contest,  contest: 'default', id: 'null' }
     methods: [GET|POST]
+    
+TheMountainMainBundle_fcc1:
+    path: /fcc-1
+    defaults: { _controller: TheMountainMainBundle:Contest:fcc1 }
+    methods: [GET|POST]
+    
+TheMountainMainBundle_fcc2:
+    path: /fcc-2
+    defaults: { _controller: TheMountainMainBundle:Contest:fcc2 }
+    methods: [GET|POST]
   
 TheMountainMainBundle_splash:
     path: /info/{splash}

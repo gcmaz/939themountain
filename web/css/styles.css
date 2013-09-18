@@ -460,11 +460,12 @@ div.dbl-row p:first-child + p{
 }
 .contest p{
     font-weight:700;
-    line-height:1.4;
+    line-height:1.2;
     font-size:1.1em;
     color:#999;
     width:95%;
     margin:auto;
+    padding:10px;
 }
 .sponsors ul li a img{
 	margin:15px auto;
