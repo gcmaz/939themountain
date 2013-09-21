@@ -21,19 +21,80 @@
 {% endblock %}
 
 {% block content %}
-    <div class="contest">
-        <img src="{{ asset('images/660x250/maui2013.jpg') }}" width="660" height="250" alt="Play Like Your Way To Maui! " />
-        <p>
-            Once every weekday, Eddie will call out a <span class="yellow">daily winner</span> that will be invited to attend our big Holiday Party at Cliff Castle Casino Hotel for chances to win up to <span class="yellow">$50,000 CASH</span> and a Dream Vacation to Maui!!!
+    <div class="arial centered contest" style="background-color:#fff;">
+        <img src="{{ asset('images/660x250/maui2013.jpg') }}" width="660" height="250" alt="Play Like Your Way To Maui!" usemap="#ccc" style="border:1px solid white;"/>
+        <p style="font-weight:600;font-size:1.2em;width:90%;color:#000;">
+            <span class="red">Like Your Way to Maui</span> presented by <a href="http://www.cliffcastlecasinohotel.com/" target="_blank" style="color:#000;text-decoration:none;">Cliff Castle Casino Hotel</a>.  The more the <span class="blue">"Likes"</span> the more chances you have to win!
         </p>
-        <p>
-            The only way to enter is on our Facebook page or our sponsors Facebook pages (click the Sponsor logos below to go to their pages)
+        <p style="font-size:1em;margin:auto;float:left;width:45%;color:#000;">
+            "Like" the following sponsors pages and fill out the form on each page and you'll be registered for a <span style="font-weight:600;">7 Day and 6 Night Stay in Maui</span> at the Ka'anapalli Beach Hotel.  With each "Like" you will increase your chances of winning.
         </p>
-        <div class="sponsors">
-            <p style="font-size:11px;font-weight:bold;color:#666;padding:5px;margin-top:10px;">Brought To You By:</p>
-            <br class="clear" />  
+        <p style="float:right;width:45%;font-size:0.9em;margin-top:1.5em;color:#000;">
+            <a href="#details" style="font-weight: 600;font-size: 0.7em;text-decoration:none;color:#333;margin-top:-2px;">
+                <img src="{{asset('images/sponsors/kbh_logo.jpg')}}" width="280" height="auto" alt="Ka'anapali Beach Hotel" border="0" />
+                More about Ka'anapali Beach Hotel &raquo;
+            </a>
+            <br/><br/>
+            <a href="http://www.kaanapaliresort.com/" target="_blank">
+                <img src="{{asset('images/sponsors/kaanapali-beach-resort.jpg')}}" width="170" height="auto" alt="Ka'anapali Beach Resort" border="0" />
+            </a>
+        </p>
+        <p class="clear" style="font-size:1.2em;font-weight:600;width:70%;color:#43609c;">
+            We'll announce a qualifier each weekday beginning on Monday Oct 7th
+        </p>
+        <p style="font-weight:600;font-size:1.2em;width:90%;color:#000;">
+            All qualifiers will get to come to our Cash party at <a href="http://www.cliffcastlecasinohotel.com/" target="_blank" style="color:#000;text-decoration:none;">Cliff Castle Casino Hotel</a> and have their chance at cash, prizes and one of TWO trips to Maui.    
+        </p>
+        <div class="centered sponsors">
+            <p style="font-size:0.8em;font-weight:bold;color:#666;padding:3px;margin-top:10px;background-color:#eaeaea;">Sponsors (Note: Not all sponsors are participating in the Facebook Entry)</p>
+            <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="https://www.facebook.com/CliffCastleCasino" target="_blank"><img src="{{asset('images/sponsors/cliff-castle-casino-hotel.jpg')}}" width="150" height="auto" /></a></li>
+                <li><a href="http://a.pgtb.me/Dkg6LQ" target="_blank"><img src="{{asset('images/sponsors/939mtn.jpg')}}" width="110" height="auto" /></a></li>
+                <li><a href="http://a.pgtb.me/fNXZTQ" target="_blank"><img src="{{asset('images/sponsors/106hits.jpg')}}" width="110" height="auto" /></a></li>
+                <li><img src="{{asset('images/sponsors/old-trails-true-value.jpg')}}" width="140" height="auto" /></li>
+            </ul>
+            <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="http://www.kbhmaui.com/" target="_blank"><img src="{{asset('images/sponsors/kaanapali-beach-hotel.jpg')}}" width="190" height="auto" style="margin:40px auto 20px;"/></a></li>
+                <li><a href="http://a.pgtb.me/N42lWX" target="_blank"><img src="{{asset('images/sponsors/935flagcountry.jpg')}}" width="110" height="auto" /></a></li>
+                <li><a href="https://www.facebook.com/pages/Cowboy-Shop/112769262148232" target="_blank"><img src="{{asset('images/sponsors/cowboy-shop.jpg')}}" width="180" height="auto" style="margin:20px auto;"/></a></li>
+                <li><img src="{{asset('images/sponsors/boys-girls-club.jpg')}}" width="130" height="auto" /></li>
+            </ul>
+             <ul style="width:200px;list-style-type:none;margin:0 auto;padding:0;display:inline-block;vertical-align: top;">
+                <li><a href="http://kaanapaliresort.com/" target="_blank"><img src="{{asset('images/sponsors/kaanapali-beach-resort.jpg')}}" width="140" height="auto" /></a></li>
+                <li><a href="http://a.pgtb.me/xwTfJP" target="_blank"><img src="{{asset('images/sponsors/929kaff.jpg')}}" width="120" height="auto" /></a></li>
+                <li><img src="{{asset('images/sponsors/highlands-floor-window.jpg')}}" width="150" height="auto" /></li>
+            </ul>
+            <br class="clear" />
         </div>
         <p><a href="#" target="_blank" style="text-decoration:none;color:#666;font-size:10px;">Official Rules</a></p>
         <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_contest', {'contest':'like-your-way-to-maui'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+        <br/>
+        <div style="text-align: left;font-size:0.8em;">
+            <a name="details"></a>
+            <img src="{{asset('images/sponsors/kbh_logo.jpg')}}" width="280" height="auto" alt="Ka'anapali Beach Hotel" border="0" />
+            <p style="font-size:1.5em;font-weight: 700;color:#000;">Ka‘anapali Beach Hotel <a href="http://www.kbhmaui.com/" target="_blank" style="font-size:0.8em;color:#039;text-decoration:none;font-weight: 600;margin-left:20px;">Visit Website &raquo;</a></p>
+            <p style="color:#000;">Located in the heart of Maui’s premier resort fronting the flawless three-mile stretch of world-famous Ka‘anapali Beach, Ka‘anapali Beach Hotel is officially recognized as “Hawai‘i’s Most Hawaiian Hotel” and #1 Best Value in Hawaii. With 432 rooms, a range of accommodations is available, as well as affordable dining options where kids 5 years of age and under eat free when accompanied by an adult.</p>
+            <p style="color:#000;">This is the ideal setting to turn Hawaiian dreams into lifelong memories. Our signature Hawaiian cultural program, Ke Kula o ka Po‘okela (School of Excellence) is the foundation of award-winning service.  Serenades by staff, Hawaii regional cuisine, complimentary sunset hula show and live Hawaiian entertainment every evening, complimentary daily interactive Hawaiian cultural activities, free year ‘round children’s program, daily arts & crafts fair, welcome breakfast and departure kukui lei ceremony add to the value.  Swim in the whale shaped pool, indulge in fabulous spa treatments at the hotel salon, plus tee off at a nearby golf course designed by Robert Trent Jones and Arthur Jack Snyder.</p>
+            <p style="color:#000;">Enjoy Hawaiian hookipa (hospitality) at its best at Ka‘anapali Beach Hotel.  To book your dream vacation, visit KBHMaui.com, or call 800-262-8450.</p>
+            <p>
+                <ul style="width:80%;margin:auto;">
+                    <li style="list-style-type: disc;padding:5px 0;">Come play on Maui’s best beach and enjoy Free Nightly Sunset Hula Shows, Daily Hawaiian Activities and a Free Children’s Program. Your visit includes a welcome breakfast for stays over three nights and farewell lei ceremony</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Hawaii’s Most Hawaiian Hotel is also Hawaii’s Best Value.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Rates from $169</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Situated on 11 acres of tropical gardens and lawns, Ka‘anapali Beach Hotel fronts the No. 1 beach on TripAdvisor’s 2013 Travelers’ Choice Beach Awards.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Our staff of full-time Hawaiian cultural advisors and others continually offers their knowledge of Hawaii with guests by hosting 30 fun Hawaiian cultural activities with different options every day.  Activities include ukulele lessons, hula, lei making, Hawaiian Language classes, and more. Taking advantage of these complimentary offerings will assure that your visit to Hawaii will be most enriching and memorable.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Cultural immersion begins the moment you arrive at the Ka‘anapali Beach Hotel, as staff serenades guests upon arrival and performs a Kukui Lei Ceremony upon departure. Through activities, art and artifacts -- such as canoes, hales, pahu drums and taro patches -- the hotel surroundings provide a relaxed and true Hawaiian atmosphere.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">With spacious rooms, oceanfront Family Suites that sleep five, and a free year-round Aloha Passport for Kids Children’s Program, Ka‘anapali Beach Hotel provides a family-friendly, value-packed experience. Kids 17 years and younger stay for free.  Children 5 years and younger eat for free at participating restaurants when occupied by a paid adult.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Ka‘anapali Beach Hotel (KBH) has been recognized as the “Hawaii’s Most Hawaiian Hotel” by the Waiaha Foundation based on over 100 criteria.  The Hawaii Tourism Authority has presented the “He Kuleana Ke Aloha” award to the hotel for demonstrating an ongoing responsibility, commitment and dedication to honoring and perpetuating the Hawaiian culture for generations to come.  We are the only hotel to receive either of these honors.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Ke Kula O Ka Pookela (School of Excellence) is an award-winning program, the first of its kind in Hawaii, which immerses all employees in Hawaiian history, traditions and culture. And it’s this program that has transformed us from a traditional "corporate" hotel to the leader in cultural tourism today. Created by Hotel General Manager Mike White and Dr. George Kanahele, a leading authority on Hawaiian culture, the program includes topics like Hawaiian geography, religion, mythology, economics, technology and the native Hawaiian diet.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Through landscaping, art and artifacts, the modest hotel surroundings provide a relaxed and true Hawaiian atmosphere reflecting our ultimate respect for Hawaii’s natural resources. If you are looking for the heart, warmth and authenticity of Hawaii, KBH will fulfill that Hawaiian dream.  KBH has never been a “brass and marble” hotel and you won’t find Asian art or foreign exotic animals here.</li>
+                    <li style="list-style-type: disc;padding:5px 0;">Traditions are created and sustained at KBH. Since 1990, the hotel has sponsored and hosted Hula O Na Keiki, a signature youth solo hula competition that hosts halau (hula schools) from all over the world. The annual event is held during the month of November and is presided by a panel of noteworthy and famed hula judges. It is a weekend of hula, arts and crafts, entertainment and lots of fun for everyone. This year’s event will take place November 8 – 10, 2013.</li>
+                </ul>
+            </p>
+        </div>
     </div>
+    <map id="kbh" name="ccc">
+        <area shape="rect" coords="377,84,614,118" target="_blank" href="http://www.kbhmaui.com/" />
+        <area shape="rect" coords="486,144,660,250" target="_blank" href="http://www.cliffcastlecasinohotel.com/" />
+    </map>
 {% endblock %}

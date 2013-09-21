@@ -127,17 +127,9 @@ a.link-btn:hover{
 	-webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5);
 	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5);
 }
-.textshadow{
-	text-shadow:1px 1px 1px rgba(0,0,0,.5);
-}
+
 .feedme{display:none;visibility:hidden;}
-.loud{
-	line-height:1.5;
-	background-color:#fff;
-	border:1px solid #F60;
-	font-weight:bold;
-	padding:10px;
-}
+
 div.notice {
     width:60%;
     margin:auto;
@@ -147,20 +139,32 @@ div.notice {
     padding:15px;
     font-weight:bold;
 }
-.yellow{
-	color:#faaf40;
-	text-shadow:1px 1px 1px rgba(0,0,0,.5);
+
+/********* FONTS *************/
+
+    /* menu */
+.unica{font-family: 'Unica One', sans-serif; text-transform: uppercase;}
+    /* fun page headers */
+.wall-poet{font-family: 'Wallpoet', cursive;}
+    /* more compact fonts */
+.arial{font-family: Arial, sans-serif;}
+
+.red{color:#cc0000;}
+.blue {color:#43609c;}
+.yellow{color:#faaf40;text-shadow:1px 1px 1px rgba(0,0,0,.5);}
+
+.textshadow{text-shadow:1px 1px 1px rgba(0,0,0,.5);}
+
+.loud{
+	line-height:1.5;
+	background-color:#fff;
+	border:1px solid #F60;
+	font-weight:bold;
+	padding:10px;
 }
-.wall-poet{
-	font-family: 'Wallpoet', cursive;
-}
-.unica{
-    font-family: 'Unica One', sans-serif;
-    text-transform: uppercase;
-}
-.arial{
-    font-family: Arial, sans-serif;
-}
+
+/****************************/
+
 .logo_box{}
 .sponsor_box{
     margin: -10px auto 10px;
@@ -456,12 +460,12 @@ div.dbl-row p:first-child + p{
 .contest{
     background-color:#232323;
     margin:20px auto 0;
-    width:660px;
+    width:662px;
 }
 .contest p{
-    font-weight:700;
+    font-weight:500;
     line-height:1.2;
-    font-size:1.1em;
+    font-size:1em;
     color:#999;
     width:95%;
     margin:auto;
