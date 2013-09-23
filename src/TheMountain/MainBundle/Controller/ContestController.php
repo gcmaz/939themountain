@@ -97,12 +97,12 @@ class ContestController extends Controller
     }
         public function fcc1Action()
     {
-            return $this->render('TheMountainMainBundle:Contest:foreignerchoir1.html.twig');
+            return $this->redirect($this->generateUrl('TheMountainMainBundle_contest', array('contest' => 'foreigner-choir-contest')), 301);
      }
      
     public function fcc2Action()
     {
-            return $this->render('TheMountainMainBundle:Contest:foreignerchoir2.html.twig');
+            return $this->redirect($this->generateUrl('TheMountainMainBundle_contest', array('contest' => 'foreigner-choir-contest')), 301);
      }
 }
 ?>
