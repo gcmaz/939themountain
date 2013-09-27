@@ -20,13 +20,13 @@
     <meta name="keywords" content="events, happenings, things to do, Flagstaff, Prescott, Sedona, Grand Canyon, Northern Arizona"/>
 {% endblock %}
     
-{# block leftcol_fb %}{% endblock #}
+{% block leftcol_fb %}{% endblock %}
     
-{# block leftcol_ad %}
-    <a href="http://www.thundervalleyrallyaz.com/" target="_blank">
-        <img src="{{ asset('images/300x250/thunder-valley-rally.jpg')}}" width="300" height="250" alt="Thunder Valley Ralley - Cottonwood AZ" />
+{% block leftcol_ad %}
+    <a href="http://arizonasundogs.com/" target="_blank">
+        <img src="{{asset('images/300x250/sundogs.jpg')}}" width="300" height="250" alt="Arizona Sundogs Tickets and Schedule" style="margin:5px auto;"/>
     </a>
-{% endblock #}
+{% endblock %}
     
 {% block content %}
     <img src="{{ asset('images/whats-happening.png') }}" width="600" height="100" alt="Events and Happenings - Northern Arizona and 93.9 The New Mountain - Rock Radio"/>
