@@ -28,14 +28,14 @@ TheMountainMainBundle_song_request:
     defaults: { _controller: TheMountainMainBundle:Page:songrequest }
     methods: [GET|POST]
     
-TheMountainMainBundle_concerts:
+TheMountainMainBundle_concerts_old:
     path: /concerts/rock/flagstaff/prescott/arizona
     defaults: { _controller: TheMountainMainBundle:Page:concerts }
     methods: [GET|POST]
     
-TheMountainMainBundle_concerts2:
+TheMountainMainBundle_concerts:
     path: /concerts
-    defaults: { _controller: TheMountainMainBundle:Page:concerts }
+    defaults: { _controller: TheMountainMainBundle:Concert:show }
     methods: [GET]
 
 TheMountainMainBundle_community:
