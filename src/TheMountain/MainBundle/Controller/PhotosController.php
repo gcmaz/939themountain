@@ -29,6 +29,9 @@ class PhotosController extends Controller
         } else {
                 $display_block = "
                         <h1>Select A Gallery:</h1>
+                        <p><a href=\"$photos_page_url?a=10151895091418514\">
+                                    Foreigner Pre-Concert At Cliff Castle 10-5-13
+                        </a></p>
                         <p><a href=\"$photos_page_url?a=10151785036918514\">
                                     Suddenlink / The Ridge Remote Broadcast 8-16-13
                         </a></p>
