@@ -21,6 +21,10 @@ monolog:
 
 assetic:
     use_controller: true
+    
+# Twig Configuration
+twig:
+    cache: false
 
 swiftmailer:
     delivery_address: webmaster@939themountain.com

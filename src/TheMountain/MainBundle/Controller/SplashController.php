@@ -15,7 +15,13 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
 
-            // TEACHERS APPRECIATION NIGHT
+            // GIFT OF WARMTH
+            case 'gift-of-warmth-coat-drive' :
+                return $this->render('TheMountainMainBundle:Splash:giftofwarmth.html.twig', array(
+                    'splash' => $splash
+                )); 
+                
+                // TEACHERS APPRECIATION NIGHT
             case 'teachers-appreciation-night' :
                 return $this->render('TheMountainMainBundle:Splash:teachersnight.html.twig', array(
                     'splash' => $splash
