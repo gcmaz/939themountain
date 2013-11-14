@@ -14,6 +14,12 @@ class SplashController extends Controller
                 return $this->render('TheMountainMainBundle:Splash:default.html.twig', array(
                     'splash' => $splash
                 ));
+                
+            // NORTHER LIGHTS HOLIDAY PARADE
+            case 'northern-lights-holiday-parade' :
+                return $this->render('TheMountainMainBundle:Splash:NorLightsHolidayParade.html.twig', array(
+                    'splash' => $splash
+                )); 
 
             // GIFT OF WARMTH
             case 'gift-of-warmth-coat-drive' :

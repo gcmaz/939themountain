@@ -1,0 +1,48 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Northern Lights Holiday Parade presented by Vora Financial - Downtown Flagstaff
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="The Northern Lights Holiday Parade presented by Vora Financial in Downtown Flagstaff on Saturday, December 14th, 2013 at 6pm."/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('images/splash/nor-lights-holiday-parade.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash') }}/northern-lights-holiday-parade"/>
+    <meta property="og:title" content="Northern Lights Holiday Parade presented by Vora Financial - Downtown Flagstaff"/> 
+    <meta property="og:description" content="The Northern Lights Holiday Parade presented by Vora Financial in Downtown Flagstaff on Saturday, December 14th, 2013 at 6pm."/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="holiday parade, parade of lights, Christmas Parade, Flagstaff, Downtown Flagstaff"/>
+{% endblock %}
+
+{% block content %}
+    <div class="splash" style="background-color:#fff;padding:5px;">
+        <img src="{{ asset('images/splash/nor-lights-holiday-parade.jpg') }}" width="660" height="306" alt="Northern Lights Holiday Parade in Downtown Flagstaff" />
+        <p style="text-align:center;font-size:1em;color:#000;font-weight:500;" class="arial">Join your family, friends and neighbors in Historic Downtown Flagstaff for the Vora Financial <span style="font-weight:600;">Northern Lights Holiday Parade</span> Saturday, December 14th. Enjoy dozens of floats, and vehicles decorated with holiday lights, ornaments, and garland. <strong>Santa will even make an appearance!</strong> So please dress warm, gather your friends, family and children and join us as we jump-start this year’s holiday season. We hope to see you there! <strong>Happy Holidays</strong>.<br/><br/>
+          <br/>
+          <span style="color:#C00;font-size:1.3em;">Historic Downtown Flagstaff, December 14th 2013 6pm</span>
+        </p>
+        <br/>
+        <p style="width:300px;float:left;text-align:center;font-size:0.8em;color:#000;">
+        <a href="http://business.flagstaffchamber.com/events/details/northern-lights-holiday-parade-3533" target="_blank" style="color:blue;">Click Here For An Application &raquo;</a>
+        <br/><br/>
+        Visit the<br/><a href="http://www.flagstaffchamber.com" target="_blank" style="color:blue;">Flagstaff Chamber of Commerce</a> for more information.
+        <br/><br/>
+        <a href="http://www.flagstaffchamber.com" target="_blank"><img src="{{asset('images/sponsors/flag-chamber.jpg')}}" width="147" height="97" alt="Flagstaff Chamber" style="margin-right:20px;" /></a>
+        <br/><br/><br/>
+        <a href="http://www.vorafinancial.com/" target="_blank">
+            <img src="{{asset('images/sponsors/vora-financial.jpg')}}" width="150" height="86" alt="Presented by Vora Financial"/>
+        </a>
+        </p>
+        <p style="color:#fff;font-weight:normal;font-size:14px;text-align:center;width:300px;float:right;background-color:#cc0000;margin:0 10px 0 0;padding:5px;-moz-border-radius:5px;border-radius:5px;-webkit-border-radius:5px;">
+            <img src="{{asset('images/splash/nlhp-map.jpg')}}" width="254" height="357" alt="Northern Lights Holiday Parade Downtown Flagstaff Map" />  
+        </p>
+        <br style="clear:both;" /><br/>
+        <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash', {'splash': 'northern-lights-holiday-parade'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+    </div>
+{% endblock %}
