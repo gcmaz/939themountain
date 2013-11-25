@@ -49,10 +49,10 @@ table {
 /********* END BROWSER CSS RESET *********/
 
 body{
-	background-color:#000;
-                background-position: top center;
-                background-repeat: no-repeat;
-	font-family:Verdana, Geneva, sans-serif;
+    background-color:#000;
+    background-position: top center;
+    background-repeat: no-repeat;
+    font-family:Verdana, Geneva, sans-serif;
 }
 .bodybg1{ background-image: url('../images/1650wide/bg1.jpg'); }
 .bodybg2{ background-image: url('../images/1650wide/bg2.jpg'); }
@@ -71,6 +71,9 @@ body{
 	background-repeat:no-repeat;
                 overflow: auto;
 }
+.takeover{background-color:#000;background-image: url('../images/takeover/ex/bg.jpg');}
+.takeover-hdr{width:100%;height:75px;}
+
 h1{
     color:#f6ad40;
     font-weight:700;
