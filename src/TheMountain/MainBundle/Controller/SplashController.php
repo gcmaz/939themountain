@@ -15,7 +15,13 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
                 
-            // NORTHER LIGHTS HOLIDAY PARADE
+            // BOOT DROP
+            case 'boot-drop-prescott-2014' :
+                return $this->render('TheMountainMainBundle:Splash:bootdrop.html.twig', array(
+                    'splash' => $splash
+                )); 
+                
+                // NORTHER LIGHTS HOLIDAY PARADE
             case 'northern-lights-holiday-parade' :
                 return $this->render('TheMountainMainBundle:Splash:NorLightsHolidayParade.html.twig', array(
                     'splash' => $splash
