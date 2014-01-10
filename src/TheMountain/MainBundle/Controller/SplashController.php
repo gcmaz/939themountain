@@ -15,6 +15,12 @@ class SplashController extends Controller
                     'splash' => $splash
                 ));
                 
+            // DEW DOWNTOWN
+            case 'dew-downtown-flagstaff' :
+                return $this->render('TheMountainMainBundle:Splash:dewdowntown.html.twig', array(
+                    'splash' => $splash
+                )); 
+                
             // BOOT DROP
             case 'boot-drop-prescott-2014' :
                 return $this->render('TheMountainMainBundle:Splash:bootdrop.html.twig', array(

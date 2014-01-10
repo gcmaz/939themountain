@@ -1,0 +1,39 @@
+{% extends 'TheMountainMainBundle::layout.html.twig' %}
+
+{% block title %}
+    Dew Downtown Flagstaff - Mountain Dew's Urban Ski and Snowboard Festival
+{% endblock %}
+
+{% block description %}
+    <meta name="description" content="Dew Downtown Flagstaff - Mountain Dew's Urban Ski and Snowboard Festival February 8 and 9, 2014"/>
+    <meta property="og:site_name" content="http://939themountain.gcmaz.com" />
+    <meta property="fb:admins" content="100003228578475" />
+    <meta property="fb:app_id" content="159639224186993" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:image" content="http://939themountain.gcmaz.com{{ asset('images/660x250/dew-downtown2014.jpg') }}"/>
+    <meta property="og:url" content="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash', {'splash':'dew-downtown-flagstaff'}) }}"/>
+    <meta property="og:title" content="Dew Downtown Flagstaff - Mountain Dew's Urban Ski and Snowboard Festival"/> 
+    <meta property="og:description" content="Dew Downtown Flagstaff - Mountain Dew's Urban Ski and Snowboard Festival February 8 and 9, 2014"/>
+{% endblock %}
+
+{% block keywords %}
+    <meta name="keywords" content="dew downtown, Flagstaff, ski, snowboard"/>
+{% endblock %}
+
+{% block content %}
+    <div class="splash arial" style="background-color:#000;text-align:left;font-weight:400;padding-bottom:50px;">
+        <div style="margin:0 auto;padding:0;">
+            <div class="fb-like" data-href="http://939themountain.gcmaz.com{{ path('TheMountainMainBundle_splash', {'splash': 'dew-downtown-flagstaff'}) }}" data-send="true" data-width="450" data-show-faces="true" data-font="arial" data-colorscheme="dark" style="margin:3px auto;padding:0;"></div>
+        </div>
+        <img src="{{asset('images/660x250/dew-downtown2014.jpg')}}" width="660" height="454" alt="Dew Downtown Flagstaff 2014" class="centered"/>
+        <p style="color:#8aff00;font-weight:600;font-size:1.2em;margin:10px 20px;">Mountain Dew's Urban Ski and Snowboard Festival</p>
+        <p style="font-size:1em;color:#fff;line-height:1.5;margin:10px 20px;">
+            On February 8 and 9, 2014 the Dew Downtown Flagstaff Urban Ski and Snowboard Festival an adrenaline rich, high octane, two day ski and snowboard competition will shred its way through historic downtown Flagstaff. Mark your calendar and plan to watch winter dare devils of all ages grind, jump and shred along San Francisco Street.
+            This year on Saturday the festival stretches from Aspen Avenue to Birch Avenue featuring a children’s area with activities and games, more vendors and a stage with live music. The event comes to life with a beer garden for adults and competitive qualifying rounds for those daredevils who take on the course.  With all this and more, Dew Downtown Flagstaff is the jewel of Flagstaff’s Winterfest celebration and an awesome way to enjoy the snowy season.
+        </p>
+        <p class="centered">
+            <a href="http://www.dewdowntownflagstaff.com" target="_blank" style="color:#8aff00;font-weight:600;">Visit Website &raquo;</a>
+        </p>
+        <br/><br/>
+    </div>
+{% endblock %}
