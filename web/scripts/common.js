@@ -16,17 +16,32 @@ $(document).ready(function(){
     var numRand = Math.floor(Math.random()*7);
     $('body').addClass(classes[numRand]);
     
-    /*  ------top rightcol pop 660x150 banner  */
+    /*  ------exp leaderboard 660x150 banner  */
     var $popban = $(document).find('#expleaderboard');
     $(function(){
-        $popban.delay(10000).animate({ height:18, bottom:0, marginTop:0}, function(){
+        $popban.delay(10000).animate({ height:20, bottom:0}, function(){
             //show hide funx
             $popban.mouseover(function(){
-                $popban.stop().animate({ height:150, bottom:150, marginTop:0});
+                $popban.stop().animate({ height:150, bottom:150});
             });
             $popban.mouseout(function(){
-                $popban.stop().animate({ height:18, bottom:0, marginTop:0});
+                $popban.stop().animate({ height:18, bottom:0});
             });
         });
     });
+    
+    /* ------page takeover header shrink from 250 to 100   */
+    var $tkohdr = $(document).find('.takeover-hdr');
+    $(function(){
+        $tkohdr.delay(10000).animate({ height:100, bottom:0, marginTop:0}, function(){
+            //show hide funx
+            $tkohdr.mouseover(function(){
+                $tkohdr.stop().animate({ height:250, bottom:250, marginTop:0});
+            });
+            $tkohdr.mouseout(function(){
+                $tkohdr.stop().animate({ height:100, bottom:0, marginTop:0});
+            });
+        });
+    });
+    
 });
