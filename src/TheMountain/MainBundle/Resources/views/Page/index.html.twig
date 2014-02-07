@@ -10,14 +10,14 @@
 {% block leftcol_ad %}
     <img src="{{asset('images/300x250/azcu-olympic-medal.jpg')}}" width="300" height="250" alt="Olympic Tracker sponsored by Arizona Central Credit Union" style="margin:5px auto;" usemap='#azcu'/>
     <map name='azcu' id='azcu'>
-        <area shape='rect' coords='0,0,300,100' href='http://azcentralcu.pwlanding.com/022/' alt='Arizona Central Credit Union' target='_blank'>
-        <area shape='rect' coords='0,101,300,250' href='http://www.nbcolympics.com/medals' alt='Sochi Olympics Medal Tracker' target='_blank'>
+        <area shape='rect' coords='0,0,300,100' href='http://azcentralcu.pwlanding.com/022/' alt='Arizona Central Credit Union' target='_blank' onclick="ga('send', 'event', 'olympic_tracker', 'click-azcu', 'mountain');">
+        <area shape='rect' coords='0,101,300,250' href='http://www.nbcolympics.com/medals' alt='Sochi Olympics Medal Tracker' target='_blank' onclick="ga('send', 'event', 'olympic_tracker', 'click-nbc', 'mountain');">
     </map>
 {% endblock %}
     
 {% block exp_leaderboard %}
     <div id="expleaderboard">
-        <a href="http://www.arizonasnowbowl.com/" target="_blank">
+        <a href="http://www.arizonasnowbowl.com/" target="_blank" onclick="ga('send', 'event', 'expleaderboard', 'click', 'mountain');">
             <img src="{{ asset('images/660x150/snowbowl.jpg') }}" width="660" height="150" alt="Ski and Snowboard at Arizona Snowbowl" />
         </a>
     </div>
