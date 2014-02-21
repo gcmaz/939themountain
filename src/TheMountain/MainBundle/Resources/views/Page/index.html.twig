@@ -7,13 +7,13 @@
     
 {% block leftcol_fb %}{% endblock %}
     
-{% block leftcol_ad %}
+{# block leftcol_ad %}
     <img src="{{asset('images/300x250/azcu-olympic-medal.jpg')}}" width="300" height="250" alt="Olympic Tracker sponsored by Arizona Central Credit Union" style="margin:5px auto;" usemap='#azcu'/>
     <map name='azcu' id='azcu'>
         <area shape='rect' coords='0,0,300,100' href='http://azcentralcu.pwlanding.com/022/' alt='Arizona Central Credit Union' target='_blank' onclick="ga('send', 'event', 'olympic_tracker', 'click-azcu', 'mountain');">
         <area shape='rect' coords='0,101,300,250' href='http://www.nbcolympics.com/medals' alt='Sochi Olympics Medal Tracker' target='_blank' onclick="ga('send', 'event', 'olympic_tracker', 'click-nbc', 'mountain');">
     </map>
-{% endblock %}
+{% endblock #}
     
 {% block exp_leaderboard %}
     <div id="expleaderboard">
