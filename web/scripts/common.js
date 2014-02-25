@@ -12,8 +12,8 @@ $(document).ready(function(){
     });
     
     /* -----  random gutter image ----- */
-    var classes = ['bodybg1', 'bodybg2', 'bodybg3', 'bodybg4', 'bodybg5', 'bodybg6', 'bodybg7'];
-    var numRand = Math.floor(Math.random()*7);
+    var classes = ['bodybg1', 'bodybg2', 'bodybg3', 'bodybg4', 'bodybg5', 'bodybg6'];
+    var numRand = Math.floor(Math.random()*6);
     $('body').addClass(classes[numRand]);
     
     /*  ------exp leaderboard 660x150 banner  */
